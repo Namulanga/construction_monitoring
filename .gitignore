@@ -1,0 +1,185 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ============================================================
+# Тесты / линтеры / кеши
+# ============================================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+coverage.xml
+*.cover
+
+# ============================================================
+# Переменные окружения и секреты
+# ============================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+kaggle.json
+.kaggle/
+
+# ============================================================
+# Данные (тяжёлые — не коммитим)
+# ============================================================
+data/datasets/
+data/snapshots/
+data/schedules/*
+!data/schedules/.gitkeep
+data/raw/
+data/processed/
+data/yolo/
+
+# Отчёты и результаты
+*.csv
+*.xlsx
+*.xls
+!requirements.csv
+
+# ============================================================
+# ML-артефакты
+# ============================================================
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pb
+*.tflite
+*.weights
+*.caffemodel
+ml_service/weights/*.pt
+ml_service/weights/*.onnx
+ml_service/runs/
+runs/
+wandb/
+*.log
+
+# ============================================================
+# Docker
+# ============================================================
+*.pid
+docker-compose.override.yml
+.docker/
+postgres_data/
+pg_data/
+
+# ============================================================
+# База данных локально (SQLite для тестов)
+# ============================================================
+*.db
+*.sqlite
+*.sqlite3
+test.db
+dev.db
+
+# ============================================================
+# IDE и редакторы
+# ============================================================
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+.vim/
+.nvim/
+
+# ============================================================
+# Jupyter Notebook
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================================
+# Операционные системы
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# Логи и временные файлы
+# ============================================================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# ============================================================
+# Node.js (на случай если фронт на JS)
+# ============================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+.next/
+out/
+.cache/
+.parcel-cache/
+
+# ============================================================
+# Проектные исключения
+# ============================================================
+# Оставляем пустые папки в репо
+!data/snapshots/.gitkeep
+!data/datasets/.gitkeep
+!data/schedules/.gitkeep
+!ml_service/weights/.gitkeep
+
+# README и документация всегда в репо
+!README.md
+!docs/**
