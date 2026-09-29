@@ -1,60 +1,335 @@
-body{
+/* =========================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+   ========================================= */
+
+html,
+body {
     margin: 0;
     padding: 0;
+
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
-.block{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 1cm;
-    right: 1cm;
-    background-color: #FEFEFE;
-}
-.menu{
-    display: flex;
-    gap: 15px;
-    padding: 20px;
-}
-.menu-button {
-    width: 200px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    background-color: #A69989;
-    color: #222;
-    text-decoration: none;
+
+
+body {
+    background-color: #F1F1F1;
+
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    border-radius: 10px;
-    transition: 0.2s;    
+
+    overflow-x: hidden;
 }
-.menu-button:hover {
-    background-color: #88857D;
+
+
+/* =========================================
+   ОСНОВНОЙ БЛОК
+   ========================================= */
+
+.block {
+
+    position: relative;
+
+    top: 0;
+    left: 1cm;
+
+    width: calc(100% - 2cm);
+
+    min-height: 100vh;
+
+    background-color: #FEFEFE;
+
+    box-sizing: border-box;
+
+    animation: blockAppear 0.8s ease-out;
 }
-.logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 20px;
+
+
+/* =========================================
+   АНИМАЦИЯ ОСНОВНОГО БЛОКА
+   ========================================= */
+
+@keyframes blockAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
-.home-button {
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+
     display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ЛОГО
+   ========================================= */
+
+.logo {
+
+    width: 150px;
+
+    height: auto;
+
+    display: block;
+
+    animation: logoAppear 0.7s ease-out 0.1s;
+
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes logoAppear {
+
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================
+   КНОПКА НАЗАД
+   ========================================= */
+
+.home-button {
+
+    display: flex;
+
     align-items: center;
     justify-content: center;
+
     width: 45px;
     height: 45px;
+
     color: #88857D;
+
     text-decoration: none;
+
     font-size: 32px;
+
     font-weight: bold;
+
+    transition: 0.2s;
+
+    animation: homeAppear 0.7s ease-out 0.1s;
+
+    animation-fill-mode: backwards;
+}
+
+
+.home-button:hover {
+
+    transform: translateX(-4px);
+
+}
+
+
+@keyframes homeAppear {
+
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================
+   ГЛАВНОЕ МЕНЮ
+   ========================================= */
+
+.menu {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    animation: menuAppear 0.7s ease-out 0.2s;
+
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes menuAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   КНОПКИ МЕНЮ
+   ========================================= */
+
+.menu-button {
+
+    width: 200px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 24px;
+
+    background-color: #A69989;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
     transition: 0.2s;
 }
 
-.home-button:hover {
-    transform: translateX(-4px);
+
+.menu-button:hover {
+
+    background-color: #88857D;
+
+    transform: translateY(-2px);
+
 }
 
+
+/* =========================================
+   СТРАНИЦА КАЛЕНДАРНОГО ГРАФИКА
+   ========================================= */
+
+.calendar-content {
+
+    width: 100%;
+
+    padding: 20px 40px 80px;
+
+    box-sizing: border-box;
+
+    animation: calendarAppear 0.8s ease-out 0.2s;
+
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes calendarAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   ЗАГОЛОВОК
+   ========================================= */
+
+.calendar-content h1 {
+
+    margin: 10px 0 30px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    color: #222;
+}
+
+
+/* =========================================
+   ОБЛАСТЬ ГАНТА
+   ========================================= */
+
+.gantt-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 500px;
+
+    padding: 20px;
+
+    background-color: #FFFFFF;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================
+   CANVAS
+   ========================================= */
+
+#ganttChart {
+
+    display: block;
+
+    width: 100% !important;
+}

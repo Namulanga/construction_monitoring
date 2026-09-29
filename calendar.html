@@ -1,8 +1,74 @@
 <!DOCTYPE html>
-<head>  
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sillage — Календарный график</title>
+
     <link rel="stylesheet" href="styles.css">
+
 </head>
-<body bgcolor="F1F1F1">
-    <a href="index.html" class="home-button">&lt;</a>
-    <div class="block"></div>
+
+<body>
+
+    <div class="block">
+
+        <!-- Шапка -->
+        <div class="header">
+
+            <a href="index.html"
+               class="home-button">
+                &lt;
+            </a>
+
+            <img src="logo.jpg"
+                 alt="Sillage"
+                 class="logo">
+
+        </div>
+
+
+        <!-- Содержимое календаря -->
+        <main class="calendar-content">
+
+            <h1>
+                Календарный график выполнения
+                строительно-монтажных работ
+            </h1>
+
+
+            <div class="gantt-wrapper">
+
+                <canvas id="ganttChart"></canvas>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Библиотека для работы с датами -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+
+    <!-- Адаптер дат для Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1"></script>
+
+
+    <!-- Наши данные -->
+    <script src="calendar-data.js"></script>
+
+    <!-- Код графика -->
+    <script src="calendar.js"></script>
+
 </body>
+
+</html>
